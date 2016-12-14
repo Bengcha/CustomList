@@ -1,0 +1,12 @@
+c:\users\beng\documents\visual studio 2015\Projects\CustomeList\CustomeList\obj\Debug\CustomeList.exe
+c:\users\beng\documents\visual studio 2015\Projects\CustomeList\CustomeList\obj\Debug\CustomeList.pdb
+c:\users\beng\documents\visual studio 2015\Projects\CustomeList\CustomeList\bin\Debug\CustomeList.exe.config
+c:\users\beng\documents\visual studio 2015\Projects\CustomeList\CustomeList\bin\Debug\CustomeList.exe
+c:\users\beng\documents\visual studio 2015\Projects\CustomeList\CustomeList\bin\Debug\CustomeList.pdb
+c:\users\beng\documents\visual studio 2015\Projects\CustomeList\CustomeList\obj\Debug\CustomList.csprojResolveAssemblyReference.cache
+C:\Users\Beng\Desktop\CustomeList\CustomeList\bin\Debug\CustomeList.exe.config
+C:\Users\Beng\Desktop\CustomeList\CustomeList\obj\Debug\CustomeList.exe
+C:\Users\Beng\Desktop\CustomeList\CustomeList\obj\Debug\CustomeList.pdb
+C:\Users\Beng\Desktop\CustomeList\CustomeList\obj\Debug\CustomList.csprojResolveAssemblyReference.cache
+C:\Users\Beng\Desktop\CustomeList\CustomeList\bin\Debug\CustomeList.exe
+C:\Users\Beng\Desktop\CustomeList\CustomeList\bin\Debug\CustomeList.pdb
