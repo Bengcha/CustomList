@@ -8,7 +8,6 @@ using System.Threading.Tasks;
 namespace CustomeList
 {
     public class GenericClass<T> : IEnumerable<T>
-
     {
         int i;
         bool remove;
@@ -20,10 +19,7 @@ namespace CustomeList
         {
             CustomArrayList = new T[0];
             remove = true;
-
         }
-
-
         public void AddingObjectToList(T inputNewItem)
         {
             T[] addToColorList = new T[CustomArrayList.Length + 1];
@@ -37,8 +33,8 @@ namespace CustomeList
 
         public void RemoveObjectFromList(T removeInputItem)
         {
-            T[] removingFromArrayList = new T[CustomArrayList.Length - 1];
-            for (i = 0; i <= removingFromArrayList.Length; i++)
+            T[] removingFromArrayList = new T[CustomArrayList.Length -1];
+            for (i = 0 ; i <= removingFromArrayList.Length; i++)
             {
                 if (remove)
                 {
@@ -51,76 +47,82 @@ namespace CustomeList
                         removingFromArrayList[i] = CustomArrayList[i];
                     }
                 }
-
-                else
+                else 
                 {
                     removingFromArrayList[i - 1] = CustomArrayList[i];
-                }
-
+                }              
             }
             CustomArrayList = removingFromArrayList;
         }
 
-
-        public void RemovingObject(T removeInputItem)
-        {
-            for (i = 0; i < CustomArrayList.Length; i++)
-            {
-                if (CustomArrayList[i].Equals(removeInputItem))
-                {
-                    RemoveObjectFromList(removeInputItem);
-                }
-            }
-
-
-        }
-
-        public void DisplayObjectInColorList()
+        public void DisplayObjectInList()
         {
             foreach (T inputNewItem in CustomArrayList)
             {
                 Console.WriteLine(inputNewItem);
             }
         }
-
-        public void DisplayerObjectInClotheList()
+        public override string ToString()
         {
-            foreach (T inputNewItem1 in CustomArrayList)
-            {
-                Console.WriteLine(inputNewItem1);
-            }
-        }
-
-
-        public string ArrayListToString()
-        {
-            toString = "Object String:";
+            toString = "String:";
             for (i = 0; i < CustomArrayList.Length; i++)
             {
                 toString = toString + " " + CustomArrayList[i];
             }
-
             return toString;
-
         }
+
+        public static GenericClass<T> operator +(GenericClass<T> customList1, GenericClass<T> customList2)
+        {
+            GenericClass<T> AddArrayList = new GenericClass<T>();
+            foreach (T item in customList1)
+            {
+                AddArrayList.AddingObjectToList(item);
+            }
+            foreach (T item in customList2)
+            {
+                AddArrayList.AddingObjectToList(item);
+            }
+            return AddArrayList;
+        }
+        public static GenericClass<T> operator -(GenericClass<T> customList1, GenericClass<T> customList2)
+        {
+            for (int i = 0; i < customList1.Count(); i++)
+            {
+                for(int i2 = 0; i2 < customList2.Count(); i2++)
+                {
+                    if (customList1.CustomArrayList[i].Equals(customList2.CustomArrayList[i2]))
+                    {
+                        customList1.RemoveObjectFromList(customList2.CustomArrayList[i2]);
+                    }
+                }
+            }
+            return customList1;
+            //foreach (T item in customList1)
+            //{
+            //    SubtractArrayList.RemoveObjectFromList(item) ;
+            //}
+            //foreach (T item in customList2)
+            //{
+            //    SubtractArrayList.RemoveObjectFromList(item);
+            //}
+            //return SubtractArrayList;
+        }
+
+
+
         public IEnumerator<T> GetEnumerator()
         {
-
             for (i = 0; i < CustomArrayList.Length; i++)
             {
-                yield return CustomArrayList[i];
-               
-            }
-            
+                yield return CustomArrayList[i];          
+            }     
         }
         IEnumerator IEnumerable.GetEnumerator()
         {
             return GetEnumerator();
         }
-
-
     }
-
 
 }
 

@@ -21,8 +21,8 @@ namespace CustomeList
             genericColorList.AddingObjectToList("Yellow");
             genericColorList.AddingObjectToList("Green");
             genericColorList.AddingObjectToList("Pink");
-            genericColorList.AddingObjectToList("Black \n");
-            genericColorList.DisplayObjectInColorList();
+            genericColorList.AddingObjectToList("Black");
+            genericColorList.DisplayObjectInList();
 
             GenericClass<string> genericClotheList = new GenericClass<string>();
             Console.ForegroundColor = ConsoleColor.Green;
@@ -35,30 +35,59 @@ namespace CustomeList
             genericClotheList.AddingObjectToList("Sweater");
             genericClotheList.AddingObjectToList("Boot");
             genericClotheList.AddingObjectToList("Shoe");
-            genericClotheList.DisplayerObjectInClotheList();
+            genericClotheList.DisplayObjectInList();
             Console.ReadLine();
 
             Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.WriteLine("Removing a Object(Blue) from Color List");
+            Console.WriteLine("Removing a Object(Blue) from Lists");
             Console.ResetColor();
             genericColorList.RemoveObjectFromList("Blue");
-            genericColorList.DisplayObjectInColorList();
+            genericColorList.DisplayObjectInList();
             Console.ReadLine();
+
+            Console.WriteLine("Adding new Object(Blue) to List");
+            genericColorList.AddingObjectToList("Blue");
+            genericColorList.DisplayObjectInList();
 
             Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine("\nFrom Clothe List to String");
+            Console.WriteLine("\nList to String with Override Method");
             Console.ResetColor();
-            string toClotheString = genericClotheList.ArrayListToString();
-            string toColorString = genericColorList.ArrayListToString();
-            Console.WriteLine(toClotheString+ "\n" + toColorString);
+            string toColorString = genericColorList.ToString();
+            Console.WriteLine(toColorString);
             Console.ReadLine();
 
-            GenericClass<string> colorClothe = new GenericClass<string>();
-            foreach (string CC in colorClothe)
-            {
-                Console.WriteLine(CC);
-                Console.ReadLine();
-            }
+            GenericClass<string> OverLoadPlusOperator = new GenericClass<string>();
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.WriteLine("Adding Two Array Lists with + Operator");
+            Console.ResetColor();
+            OverLoadPlusOperator = genericColorList + genericClotheList;
+            OverLoadPlusOperator.DisplayObjectInList();
+            Console.ReadLine();
+
+            GenericClass<string> OverLoadMinusOperator = new GenericClass<string>();
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.WriteLine("Subtracting One list with - Operator");
+            Console.ResetColor();
+            OverLoadMinusOperator = (genericColorList - genericClotheList);
+            OverLoadMinusOperator.DisplayObjectInList();
+
+
+
+
+            //operatorPlus.AddingObjectToList(1);
+            //operatorPlus.AddingObjectToList(100);
+            //operatorPlus.AddingObjectToList(1000);
+            //operatorPlus.AddingObjectToList(10000);
+            //operatorPlus.AddingObjectToList(100000);
+
+            Console.ReadLine();
+
+            //GenericClass<string> colorClothe = new GenericClass<string>();
+            //foreach (string CC in colorClothe)
+            //{
+            //    Console.WriteLine(CC);
+            //    Console.ReadLine();
+            //}
 
         }
     }
