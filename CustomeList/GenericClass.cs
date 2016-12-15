@@ -11,9 +11,8 @@ namespace CustomeList
     {
         int i;
         bool remove;
-        T[] CustomArrayList;
-       
-        public string toString;
+        T[] CustomArrayList;      
+        string toString;
 
         public GenericClass()
         {
