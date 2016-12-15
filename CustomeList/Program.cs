@@ -22,8 +22,13 @@ namespace CustomeList
             genericColorList.AddingObjectToList("Green");
             genericColorList.AddingObjectToList("Pink");
             genericColorList.AddingObjectToList("Black");
+            genericColorList.Count();          
             genericColorList.DisplayObjectInList();
-            genericColorList.Count();
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine("Count Object in List: {0}", genericColorList.Count());
+            Console.ResetColor();
+
+            //genericColorList.Count();
             Console.ReadLine();
 
             GenericClass<string> genericClotheList = new GenericClass<string>();
@@ -38,6 +43,9 @@ namespace CustomeList
             genericClotheList.AddingObjectToList("Boot");
             genericClotheList.AddingObjectToList("Shoe");
             genericClotheList.DisplayObjectInList();
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine("Count Object in List: {0}", genericColorList.Count());
+            Console.ResetColor();
             //genericClotheList.CountProperty();
             Console.ReadLine();
 
@@ -46,6 +54,9 @@ namespace CustomeList
             Console.ResetColor();
             genericColorList.RemoveObjectFromList("Blue");
             genericColorList.DisplayObjectInList();
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine("Count Object in List: {0}", genericColorList.Count());
+            Console.ResetColor();
             //genericColorList.CountProperty();
             Console.ReadLine();
 
@@ -54,6 +65,10 @@ namespace CustomeList
             Console.ResetColor();
             genericColorList.AddingObjectToList("Blue");
             genericColorList.DisplayObjectInList();
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine("Count Object in List: {0}", genericColorList.Count());
+            Console.ResetColor();
+
             //genericColorList.CountProperty();
             Console.ReadLine();
 

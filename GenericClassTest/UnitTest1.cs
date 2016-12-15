@@ -188,6 +188,41 @@ namespace GenericClassTest
             //Assert
             Assert.AreEqual(list, result);
         }
+        [TestMethod]
 
+        public void CountIntObjectInList()
+        {
+            GenericClass<int> mylist = new GenericClass<int>();
+            //Arrange
+            int number1 = 1;
+            int number2 = 2;
+            int number3 = 3;
+            mylist.AddingObjectToList(number1);
+            mylist.AddingObjectToList(number2);
+            mylist.AddingObjectToList(number3);
+            int list = mylist.CustomArrayList[0];
+
+            //Act
+            int result = mylist.Count;
+            Assert.AreEqual(result, 3);
+        }
+        [TestMethod]
+
+        public void CountStringObjectInList()
+        {
+            GenericClass<string> mylist = new GenericClass<string>();
+            //Arrange
+            string shoe1 = "NIKE";
+            string shoe2 = "ADIDAS";
+            string shoe3 = "JORDAN";
+            mylist.AddingObjectToList(shoe1);
+            mylist.AddingObjectToList(shoe2);
+            mylist.AddingObjectToList(shoe3);
+            string list = mylist.CustomArrayList[0];
+
+            //Act
+            int result = mylist.Count;
+            Assert.AreEqual(result, 3);
+        }
     }
 }
