@@ -14,24 +14,37 @@ namespace CustomeList
         public T[] CustomArrayList;
         string toString;
         int count;
+        int capacity;
+       
+        public GenericClass()
+        {
+            CustomArrayList = new T[0];
+            remove = true;
+            capacity = 100;
+        }
         public int Count
         {
             get
             {
                 return count;
-
             }
             set
             {
-                count = CustomArrayList.Count();               
+                count = CustomArrayList.Count();
+            }
+        }
+        public int Capacity
+        {
+            get
+            {
+                return capacity;
+            }
+            set
+            {
+                capacity = CustomArrayList.Count();
             }
         }
 
-        public GenericClass()
-        {
-            CustomArrayList = new T[0];
-            remove = true;
-        }
         public void AddingObjectToList(T inputNewItem)
         {
             T[] addToColorList = new T[CustomArrayList.Count() + 1];
@@ -42,12 +55,11 @@ namespace CustomeList
             addToColorList[CustomArrayList.Count()] = inputNewItem;
             CustomArrayList = addToColorList;
             count++;
-           
+            capacity--;       
         }
 
         public void RemoveObjectFromList(T removeInputItem)
         {
-
             T[] removingFromArrayList = new T[CustomArrayList.Count() -1];
             for (i = 0 ; i <= removingFromArrayList.Count(); i++)
             {
@@ -68,17 +80,10 @@ namespace CustomeList
                 }              
             }
             CustomArrayList = removingFromArrayList;
-            count++;
+            count--;
+            capacity++;
         }
-
-        //public void CountProperty()
-        //{
-        //    count = CustomArrayList.Count();
-        //    Console.ForegroundColor = ConsoleColor.Red;
-        //    Console.WriteLine("number of Count in List: {0}", count);
-        //    Console.ResetColor();
-        //}
-
+  
         public void DisplayObjectInList()
         {
             foreach (T inputNewItem in CustomArrayList)
@@ -87,6 +92,7 @@ namespace CustomeList
                 count++;
             }
         }
+
         public override string ToString()
         {
             toString = "String:";
@@ -110,6 +116,7 @@ namespace CustomeList
             }
             return AddArrayList;
         }
+
         public static GenericClass<T> operator -(GenericClass<T> customList1, GenericClass<T> customList2)
         {
             for (int i = 0; i < customList1.Count(); i++)
@@ -123,15 +130,6 @@ namespace CustomeList
                 }
             }
             return customList1;
-            //foreach (T item in customList1)
-            //{
-            //    SubtractArrayList.RemoveObjectFromList(item) ;
-            //}
-            //foreach (T item in customList2)
-            //{
-            //    SubtractArrayList.RemoveObjectFromList(item);
-            //}
-            //return SubtractArrayList;
         }
 
         public IEnumerator<T> GetEnumerator()
@@ -146,7 +144,6 @@ namespace CustomeList
             return GetEnumerator();
         }
     }
-
 }
 
 

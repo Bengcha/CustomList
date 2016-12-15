@@ -9,8 +9,7 @@ namespace CustomeList
     class Program
     {
         static void Main(string[] args)
-        {
-            
+        {           
             GenericClass<string> genericColorList = new GenericClass<string>();
             Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine("Custom Color List");
@@ -26,9 +25,8 @@ namespace CustomeList
             genericColorList.DisplayObjectInList();
             Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("Count Object in List: {0}", genericColorList.Count());
+            Console.WriteLine("Amount of capacity left:{0}", genericColorList.Capacity);
             Console.ResetColor();
-
-            //genericColorList.Count();
             Console.ReadLine();
 
             GenericClass<string> genericClotheList = new GenericClass<string>();
@@ -45,8 +43,8 @@ namespace CustomeList
             genericClotheList.DisplayObjectInList();
             Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("Count Object in List: {0}", genericColorList.Count());
+            Console.WriteLine("Amount of capacity left:{0}", genericColorList.Capacity);
             Console.ResetColor();
-            //genericClotheList.CountProperty();
             Console.ReadLine();
 
             Console.ForegroundColor = ConsoleColor.Yellow;
@@ -56,8 +54,8 @@ namespace CustomeList
             genericColorList.DisplayObjectInList();
             Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("Count Object in List: {0}", genericColorList.Count());
+            Console.WriteLine("Amount of capacity left:{0}", genericColorList.Capacity);
             Console.ResetColor();
-            //genericColorList.CountProperty();
             Console.ReadLine();
 
             Console.ForegroundColor = ConsoleColor.Yellow;
@@ -67,9 +65,8 @@ namespace CustomeList
             genericColorList.DisplayObjectInList();
             Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("Count Object in List: {0}", genericColorList.Count());
+            Console.WriteLine("Amount of capacity left:{0}", genericColorList.Capacity);
             Console.ResetColor();
-
-            //genericColorList.CountProperty();
             Console.ReadLine();
 
             Console.ForegroundColor = ConsoleColor.Yellow; 
@@ -103,23 +100,7 @@ namespace CustomeList
             {
                 Console.WriteLine(Object);
             }
-
-
-            //operatorPlus.AddingObjectToList(1);
-            //operatorPlus.AddingObjectToList(100);
-            //operatorPlus.AddingObjectToList(1000);
-            //operatorPlus.AddingObjectToList(10000);
-            //operatorPlus.AddingObjectToList(100000);
-
             Console.ReadLine();
-
-            //GenericClass<string> colorClothe = new GenericClass<string>();
-            //foreach (string CC in colorClothe)
-            //{
-            //    Console.WriteLine(CC);
-            //    Console.ReadLine();
-            //}
-
         }
     }
 }
