@@ -1,0 +1,9 @@
+C:\Users\Beng\Desktop\CustomeList\GenericClassTest\bin\Debug\GenericClassTest.dll
+C:\Users\Beng\Desktop\CustomeList\GenericClassTest\bin\Debug\GenericClassTest.pdb
+C:\Users\Beng\Desktop\CustomeList\GenericClassTest\bin\Debug\CustomeList.exe
+C:\Users\Beng\Desktop\CustomeList\GenericClassTest\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\Beng\Desktop\CustomeList\GenericClassTest\bin\Debug\CustomeList.pdb
+C:\Users\Beng\Desktop\CustomeList\GenericClassTest\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.xml
+C:\Users\Beng\Desktop\CustomeList\GenericClassTest\obj\Debug\GenericClassTest.csprojResolveAssemblyReference.cache
+C:\Users\Beng\Desktop\CustomeList\GenericClassTest\obj\Debug\GenericClassTest.dll
+C:\Users\Beng\Desktop\CustomeList\GenericClassTest\obj\Debug\GenericClassTest.pdb

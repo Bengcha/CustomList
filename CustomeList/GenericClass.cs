@@ -11,9 +11,23 @@ namespace CustomeList
     {
         int i;
         bool remove;
-        T[] CustomArrayList;      
+        public T[] CustomArrayList;
         string toString;
-
+        int count;
+        public int Count
+        {
+            get
+            {
+                return count;
+            }
+            set
+            {
+                count = CustomArrayList.Count();
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("number of Count in List: {0}", count);
+                Console.ResetColor();
+            }
+        }
         public GenericClass()
         {
             CustomArrayList = new T[0];
@@ -21,19 +35,20 @@ namespace CustomeList
         }
         public void AddingObjectToList(T inputNewItem)
         {
-            T[] addToColorList = new T[CustomArrayList.Length + 1];
-            for (i = 0; i < CustomArrayList.Length; i++)
+            T[] addToColorList = new T[CustomArrayList.Count() + 1];
+            for (i = 0; i < CustomArrayList.Count(); i++)
             {
                 addToColorList[i] = CustomArrayList[i];
             }
-            addToColorList[CustomArrayList.Length] = inputNewItem;
+            addToColorList[CustomArrayList.Count()] = inputNewItem;
             CustomArrayList = addToColorList;
         }
 
         public void RemoveObjectFromList(T removeInputItem)
         {
-            T[] removingFromArrayList = new T[CustomArrayList.Length -1];
-            for (i = 0 ; i <= removingFromArrayList.Length; i++)
+
+            T[] removingFromArrayList = new T[CustomArrayList.Count() -1];
+            for (i = 0 ; i <= removingFromArrayList.Count(); i++)
             {
                 if (remove)
                 {
@@ -54,6 +69,14 @@ namespace CustomeList
             CustomArrayList = removingFromArrayList;
         }
 
+        //public void CountProperty()
+        //{
+        //    count = CustomArrayList.Count();
+        //    Console.ForegroundColor = ConsoleColor.Red;
+        //    Console.WriteLine("number of Count in List: {0}", count);
+        //    Console.ResetColor();
+        //}
+
         public void DisplayObjectInList()
         {
             foreach (T inputNewItem in CustomArrayList)
@@ -64,7 +87,7 @@ namespace CustomeList
         public override string ToString()
         {
             toString = "String:";
-            for (i = 0; i < CustomArrayList.Length; i++)
+            for (i = 0; i < CustomArrayList.Count(); i++)
             {
                 toString = toString + " " + CustomArrayList[i];
             }
@@ -108,11 +131,9 @@ namespace CustomeList
             //return SubtractArrayList;
         }
 
-
-
         public IEnumerator<T> GetEnumerator()
         {
-            for (i = 0; i < CustomArrayList.Length; i++)
+            for (i = 0; i < CustomArrayList.Count(); i++)
             {
                 yield return CustomArrayList[i];          
             }     

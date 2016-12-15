@@ -23,10 +23,11 @@ namespace CustomeList
             genericColorList.AddingObjectToList("Pink");
             genericColorList.AddingObjectToList("Black");
             genericColorList.DisplayObjectInList();
+            genericColorList.Count();
             Console.ReadLine();
 
             GenericClass<string> genericClotheList = new GenericClass<string>();
-            Console.ForegroundColor = ConsoleColor.Green;
+            Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine("Custom Clothe List");
             Console.ResetColor();
             genericClotheList.AddingObjectToList("T-Shirt");
@@ -37,6 +38,7 @@ namespace CustomeList
             genericClotheList.AddingObjectToList("Boot");
             genericClotheList.AddingObjectToList("Shoe");
             genericClotheList.DisplayObjectInList();
+            //genericClotheList.CountProperty();
             Console.ReadLine();
 
             Console.ForegroundColor = ConsoleColor.Yellow;
@@ -44,16 +46,18 @@ namespace CustomeList
             Console.ResetColor();
             genericColorList.RemoveObjectFromList("Blue");
             genericColorList.DisplayObjectInList();
+            //genericColorList.CountProperty();
             Console.ReadLine();
 
-            Console.ForegroundColor = ConsoleColor.Green;
+            Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine("Adding new Object(Blue) to List");
             Console.ResetColor();
             genericColorList.AddingObjectToList("Blue");
             genericColorList.DisplayObjectInList();
+            //genericColorList.CountProperty();
             Console.ReadLine();
 
-            Console.ForegroundColor = ConsoleColor.Green;
+            Console.ForegroundColor = ConsoleColor.Yellow; 
             Console.WriteLine("\nList to String with Override Method");
             Console.ResetColor();
             string toColorString = genericColorList.ToString();
@@ -76,8 +80,8 @@ namespace CustomeList
             OverLoadMinusOperator.DisplayObjectInList();
             Console.ReadLine();
 
-            Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine("Zip Array List");
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.WriteLine("Zip Two Custom List");
             Console.ResetColor();
             var zipArray = genericColorList.Zip(genericClotheList, (a, b) => (a +" "+ b));
             foreach (string Object in zipArray)
