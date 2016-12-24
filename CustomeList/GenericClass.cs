@@ -9,17 +9,13 @@ namespace CustomeList
 {
     public class GenericClass<T> : IEnumerable<T>
     {
-        int i;
-        bool remove;
-        public T[] CustomArrayList;
-        string toString;
+        T[] CustomArrayList;
         int count;
         int capacity;
        
         public GenericClass()
         {
             CustomArrayList = new T[0];
-            remove = true;
             capacity = 100;
         }
         public int Count
@@ -44,11 +40,10 @@ namespace CustomeList
                 capacity = CustomArrayList.Count();
             }
         }
-
         public void AddingObjectToList(T inputNewItem)
         {
             T[] addToColorList = new T[CustomArrayList.Count() + 1];
-            for (i = 0; i < CustomArrayList.Count(); i++)
+            for (int i = 0; i < CustomArrayList.Count(); i++)
             {
                 addToColorList[i] = CustomArrayList[i];                
             }
@@ -57,12 +52,12 @@ namespace CustomeList
             count++;
             capacity--;       
         }
-
         public void RemoveObjectFromList(T removeInputItem)
         {
+            bool remove = true;
             T[] removingFromArrayList = new T[CustomArrayList.Count() -1];
-            for (i = 0 ; i <= removingFromArrayList.Count(); i++)
-            {
+            for (int i = 0 ; i <= removingFromArrayList.Count(); i++)
+            {               
                 if (remove)
                 {
                     if (CustomArrayList[i].Equals(removeInputItem))
@@ -82,8 +77,7 @@ namespace CustomeList
             CustomArrayList = removingFromArrayList;
             count--;
             capacity++;
-        }
-  
+        } 
         public void DisplayObjectInList()
         {
             foreach (T inputNewItem in CustomArrayList)
@@ -92,15 +86,16 @@ namespace CustomeList
                 count++;
             }
         }
-
         public override string ToString()
         {
-            toString = "String:";
-            for (i = 0; i < CustomArrayList.Count(); i++)
+            StringBuilder builder = new StringBuilder();
+            foreach (T items in CustomArrayList) 
             {
-                toString = toString + " " + CustomArrayList[i];
+                builder.Append(items).Append(" "); 
             }
-            return toString;
+            string result = builder.ToString(); 
+            Console.WriteLine(result);
+            return result;
         }
 
         public static GenericClass<T> operator +(GenericClass<T> customList1, GenericClass<T> customList2)
@@ -131,10 +126,19 @@ namespace CustomeList
             }
             return customList1;
         }
-
+        public void Zipper(GenericClass<T> customList1, GenericClass<T> customList2)
+        {
+            if (customList1.CustomArrayList.Count() >= customList2.CustomArrayList.Count())
+            {
+                for (int i = 0; i < customList1.CustomArrayList.Count(); i++)
+                {
+                    Console.WriteLine(customList1.CustomArrayList[i] + " " + customList2.CustomArrayList[i]);
+                }
+            }
+        }
         public IEnumerator<T> GetEnumerator()
         {
-            for (i = 0; i < CustomArrayList.Count(); i++)
+            for (int i = 0; i < CustomArrayList.Count(); i++)
             {
                 yield return CustomArrayList[i];          
             }     

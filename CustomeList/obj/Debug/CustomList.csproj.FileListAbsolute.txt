@@ -10,3 +10,9 @@ C:\Users\Beng\Desktop\CustomeList\CustomeList\obj\Debug\CustomeList.pdb
 C:\Users\Beng\Desktop\CustomeList\CustomeList\obj\Debug\CustomList.csprojResolveAssemblyReference.cache
 C:\Users\Beng\Desktop\CustomeList\CustomeList\bin\Debug\CustomeList.exe
 C:\Users\Beng\Desktop\CustomeList\CustomeList\bin\Debug\CustomeList.pdb
+C:\Users\Beng\Desktop\DevCode\CustomeList\CustomeList\bin\Debug\CustomeList.exe.config
+C:\Users\Beng\Desktop\DevCode\CustomeList\CustomeList\obj\Debug\CustomeList.exe
+C:\Users\Beng\Desktop\DevCode\CustomeList\CustomeList\obj\Debug\CustomeList.pdb
+C:\Users\Beng\Desktop\DevCode\CustomeList\CustomeList\bin\Debug\CustomeList.exe
+C:\Users\Beng\Desktop\DevCode\CustomeList\CustomeList\bin\Debug\CustomeList.pdb
+C:\Users\Beng\Desktop\DevCode\CustomeList\CustomeList\obj\Debug\CustomList.csprojResolveAssemblyReference.cache

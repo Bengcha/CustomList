@@ -48,7 +48,7 @@ namespace CustomeList
             Console.ReadLine();
 
             Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.WriteLine("Removing a Object(Blue) from Lists");
+            Console.WriteLine("Removing a Object(Blue) from List");
             Console.ResetColor();
             genericColorList.RemoveObjectFromList("Blue");
             genericColorList.DisplayObjectInList();
@@ -72,8 +72,7 @@ namespace CustomeList
             Console.ForegroundColor = ConsoleColor.Yellow; 
             Console.WriteLine("\nList to String with Override Method");
             Console.ResetColor();
-            string toColorString = genericColorList.ToString();
-            Console.WriteLine(toColorString);
+            genericColorList.ToString();           
             Console.ReadLine();
 
             GenericClass<string> OverLoadPlusOperator = new GenericClass<string>();
@@ -92,15 +91,15 @@ namespace CustomeList
             OverLoadMinusOperator.DisplayObjectInList();
             Console.ReadLine();
 
+            GenericClass<string> ZipList = new GenericClass<string>();
             Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine("Zip Two Custom List");
             Console.ResetColor();
-            var zipArray = genericColorList.Zip(genericClotheList, (a, b) => (a +" "+ b));
-            foreach (string Object in zipArray)
-            {
-                Console.WriteLine(Object);
-            }
+            ZipList.Zipper(genericColorList, genericClotheList);
+            ZipList.DisplayObjectInList();
             Console.ReadLine();
         }
     }
 }
+
+            
